@@ -1,12 +1,5 @@
 export default [
-    {
-      type: 'Online_Tutors',
-      imageUri: require('./assets/online.png'),
-      heading: 'Vibrant colors',
-      description: 'Four on-trend colorways to seamlessly suit your style.',
-      key: 'first',
-      color: '#9dcdfa',
-    },
+ 
     {
       type: 'Login admin',
       imageUri: require('./assets/Admin.png'),
