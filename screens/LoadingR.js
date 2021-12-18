@@ -22,10 +22,10 @@ export default function Loading({ navigation }) {
      <Text
         style={styles.textL}
       >
-        Online Tutors
+        WELCOME 
       </Text>
       <LottieView
-        source={require("../assets/graduation.json")}
+        source={require("../assets/lf20_aytbvjuy.json")}
         style={styles.lottie}
         autoPlay
         loop={false}

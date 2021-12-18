@@ -9,10 +9,11 @@ import {
   TouchableOpacity,
 } from "react-native";
 // import { useFonts, Pacifico_400Regular } from "@expo-google-fonts/pacifico";
+import { LinearGradient } from 'expo-linear-gradient';
 
 import LottieView from "lottie-react-native";
 
-export default function Login() {
+export default function Login({navigation}) {
   return (
     <View style={styles.container}>
       <LottieView
@@ -33,14 +34,26 @@ export default function Login() {
           secureTextEntry={true}
           style={styles.TextInput}
         />
-        <TouchableOpacity style={styles.btn}>
-          <Text style={styles.btnText}>Login</Text>
+        <TouchableOpacity style={styles.btn1}>
+          {/* <Text style={styles.btnText}>Login</Text> */}
+          <LinearGradient
+        // Button Linear Gradient
+        colors={[ '#FFB695','#FF3CBD']}
+        start={{x:1, y:0}}
+        end={{x:0, y:1}}
+        style={styles.btn}>
+
+        <Text style={styles.textb}>SIGN IN</Text>
+      </LinearGradient>
         </TouchableOpacity>
+        <TouchableOpacity  onPress={() => navigation.navigate('RegisterParent')}>
+        <Text style={styles.acc}>Don't have an account</Text></TouchableOpacity>
       </View>
       <StatusBar style="auto" />
     </View>
-  );
-}
+   );
+  }
+  
 
 const styles = StyleSheet.create({
   container: {
@@ -74,14 +87,30 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
   },
   btn: {
-    width: "100%",
-    marginVertical: 15,
-    backgroundColor: "pink",
-    padding: 15,
-    borderRadius: 30,
+    width: "70%",
+    position: 'relative',
+    left:"14.5%",
+    // top:'50%',
+    height: 50,
+    marginVertical: 8,
+    alignItems:'center',
+    justifyContent:'center',
+    // backgroundColor: "pink",
+    padding: 10,
+    borderRadius: 20,
   },
   btnText: {
     textAlign: "center",
     color: "#fff",
   },
+  textb: {
+    fontSize: 20,
+    color: 'gray',
+    // marginTop: 20
+    color:'#fff',
+    fontWeight:'bold',
+  },
+  acc:{
+  textAlign:"center", }
+  
 });
