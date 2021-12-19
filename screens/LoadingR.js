@@ -11,7 +11,7 @@ import LottieView from "lottie-react-native";
 export default function Loading({ navigation }) {
   const closeActivityIndicator = () => {
     setTimeout(() => {
-      navigation.navigate("Home");
+      navigation.navigate("Profiles");
     }, 2000);
   };
 

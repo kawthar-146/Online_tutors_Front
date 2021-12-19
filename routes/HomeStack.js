@@ -6,6 +6,7 @@ import LoginParent from "../screens/LoginParent";
 import RegisterParent from "../screens/RegisterParent";
 import LoadingR from "../screens/LoadingR";
 import { NavigationContainer } from "@react-navigation/native";
+import Profiles from "../screens/Profiles";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ export default function HomeStack({ initialRoute = "Loading" }) {
         <Stack.Screen name="LoginParent" component={LoginParent}/>
         <Stack.Screen name="RegisterParent" component={RegisterParent}/>
         <Stack.Screen name="LoadingR" component={LoadingR}/>
+        <Stack.Screen name="Profiles" component={Profiles}/>
         {/* <Stack.Screen name="TextInANest" component={TextInANest}/> */}
       </Stack.Navigator>
     </NavigationContainer>

@@ -34,7 +34,7 @@ export default function Login({navigation}) {
           secureTextEntry={true}
           style={styles.TextInput}
         />
-        <TouchableOpacity style={styles.btn1}>
+        <TouchableOpacity onPress={() => navigation.navigate('Profiles') }>
           {/* <Text style={styles.btnText}>Login</Text> */}
           <LinearGradient
         // Button Linear Gradient
@@ -43,7 +43,7 @@ export default function Login({navigation}) {
         end={{x:0, y:1}}
         style={styles.btn}>
 
-        <Text style={styles.textb}>SIGN IN</Text>
+        <Text style={styles.textb} >SIGN IN</Text>
       </LinearGradient>
         </TouchableOpacity>
         <TouchableOpacity  onPress={() => navigation.navigate('RegisterParent')}>
